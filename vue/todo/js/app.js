@@ -1,4 +1,5 @@
 (function(exports) {
+    debugger;
     var filters = {
         all: function(todos) {
             return todos;
@@ -46,11 +47,39 @@
             },
             removeTodo: function(todo) {
                 this.todos.$remove(todo);
+            },
+            editTodo: function(todo) {
+                this.beforeEditCache = todo.title;
+                this.editedTodo = todo;
+            },
+            doneEdit: function(todo) {
+                if(!this.editedTodo) {
+                    return;
+                }
+                this.editedTodo = null;
+                todo.title = todo.title.trim();
+                if(!todo.title) {
+                    this.removeTodo(todo);
+                }
+            },
+            cancelEdit: function(todo) {
+                this.editedTodo = null;
+                todo.title = beforeEditCache;
+            },
+            removeCompleted: function() {
+                this.todos = filters['active'](this.todos);
             }
         },
         directives: {
             'todo-focus': function(value) {
-                console.log(value);
+                console.log('directives');
+                if (!value) {
+					return;
+				}
+				var el = this.el;
+				Vue.nextTick(function () {
+					el.focus();
+				});
             }
         }
     })
