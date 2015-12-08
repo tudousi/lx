@@ -1,0 +1,8 @@
+http://atomenabled.org/developers/syndication/
+所有的atom feeds必须是严格的xml格式和application/atom+xml类型
+所有元素描述必须在http://www.w3.org/2005/Atom名字空间中
+使用的时间戳必须是RFC 3339格式
+xml:lang 定义语言
+xml:base 定义相对路径的根路径
+
+一个feed需要包含一些元数据，其次可以包含任意数目的条目

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><id>tag:*domain*something...</id><link type="text/html" rel="alternate" href="http://example.com"/><link type="application/atom+xml" rel="self" href="http://example.com/atom.xml"/><title>title</title><updated>2015-12-08T03:54:39.280Z</updated><entry><id>tag:...</id><published>2012-05-26T16:00:00.000Z</published><title>item title</title><content type="xhtml" xml:lang="en"><![CDATA[use this for the content. It can include html.]]></content></entry></feed>
