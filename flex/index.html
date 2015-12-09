@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+        var tname = 'tds';
+        function withs(){
+            var o = {c:"o-c"};
+            with(o) {
+                a = "o-a";
+                b = "o-b";
+                return {d:"o-d"};
+            }
+            console.log(o);
+            debugger;
+        }
+        withs();
+    </script>
+</body>
+
+</html>

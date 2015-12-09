@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js • demo</title>
+    <meta content="width=device-width,maximum-scale=1.0,initial-scale=1.0,minimum-scale=0.9,user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!--
+    <section class="todoapp">
+        <input type="text" v-model="name">
+        <label for=""> {{ name }}</label>
+        <table>
+            <tr is="td-component" v-bind:name.sync="1"></tr>
+        </table>
+    </section>
+    -->
+    <template id="child-template">
+        <input type="text" v-model="msg">
+        <button v-on:click="notify">Dispatch Event</button>
+    </template>
+    <div id="events-example">
+        <p>Message: {{ message | json }}</p>
+        <child v-on:child-msg="handleIt"  v-ref:profile></child>
+    </div>
+
+    <script src="../lib/vue.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
