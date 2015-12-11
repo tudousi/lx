@@ -35,7 +35,7 @@ Vue.component('child', {
 var vm = new Vue({
     el: '#events-example',
     data: {
-        message: []
+        show: false
     },
     methods: {
         handleIt: function(msg) {
@@ -43,7 +43,7 @@ var vm = new Vue({
         }
     }
 });
-var child = vm.$refs.profile;
+//var child = vm.$refs.profile;
 
 
 

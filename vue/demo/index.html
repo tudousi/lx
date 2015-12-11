@@ -21,8 +21,9 @@
         <button v-on:click="notify">Dispatch Event</button>
     </template>
     <div id="events-example">
-        <p>Message: {{ message | json }}</p>
-        <child v-on:child-msg="handleIt"  v-ref:profile></child>
+        <!--<div v-if="show" transition="animal">【Dispatch Event】</div>-->
+        <div v-show="show" transition="animal">Look at me!</div>
+
     </div>
 
     <script src="../lib/vue.js"></script>

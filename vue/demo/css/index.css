@@ -1,0 +1,36 @@
+/*.animal-transition {
+    transition: all .3s ease;
+  height: 30px;
+  padding: 10px;
+  background-color: pink;
+  overflow: hidden;
+}
+.animal-enter, .animal-leave {
+    height: 0;
+    padding: 0 10px;
+    opacity: 0;
+}*/
+.animal-transition {
+    transition: all .3s ease;
+    height: 30px;
+    padding: 10px;
+    background-color: pink;
+    overflow: hidden;
+}
+.animal-enter, .animal-leave {
+    height: 0;
+    padding: 0 10px;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/**/
