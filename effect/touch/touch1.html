@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>touch1</title>
+    <script src="./js/touch.js"></script>
+    <style>
+        #target {
+            width: 100px;
+            height: 100px;
+            background: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="target">
+
+    </div>
+    <script>
+        var angle = 0;
+        touch.on('#target', 'touchstart', function(ev) {
+            ev.startRotate();
+            ev.preventDefault();
+        });
+
+        debugger;
+        touch.on('#target', 'rotate', function(ev) {
+            var totalAngle = angle + ev.rotation;
+            if (ev.fingerStatus === 'end') {
+                angle = angle + ev.rotation;
+            }
+            this.style.webkitTransform = 'rotate(' + totalAngle + 'deg)';
+        });
+    </script>
+</body>
+
+</html>
